@@ -97,3 +97,60 @@ echo
 
 echo
 echo " ==== Maxsus o'zgaruvchilar ===="
+echo
+
+# Maxsus o`zgaruvchilar local va environmental ga bo'linadi 
+#  local code blockd va  functionda ishlaydi terminalda yuqoladi
+
+funk() {
+        # funksiyada
+    block="local"
+    echo $block "funksiya"
+
+}
+
+#  funksiyadan tashqarida
+    echo $block "1"
+    funk
+ # agar funk funksiyasi echodan oldin chaqirilsa endi block o'zagruvchisi o`qiladi
+    echo $block "2"
+
+
+#  == Environmental variable — bu operatsion tizimdagi jarayonlar ishlashiga ta’sir qiluvchi 
+# o‘zgaruvchi. Masalan, PATH o‘zgaruvchisi terminalga qaysi papkalarda buyruqlarni qidirishni aytadi. 
+# .bashrc fayliga yozish orqali doimiy qilinadi
+
+#  misol uchun $HOSTNAME
+
+echo $HOSTNAME # bu o'zgaruvchi hech qayerda e'lon qilinmagan va qiymat berilmagan
+#  bu tizimning o'zini o'zgaruvchisi buni har qanday scriptimizda ishlata olamiz
+
+#  Environmental variable qo'shish
+
+echo 'export MYNAME="Суръат"' >> ~/.bashrc # doimiy qilib qo'yish
+echo 'export MYNICK="norahara"' >> ~/.bashrc
+
+source ~/.bashrc 
+
+
+# == Positional Parameters
+
+# scriptni  ishga tushirishda biz unga argument ham berib ishga tushuirishimiz mumkin 
+#  misol uchun ./variable.sh arg1 arg2
+
+echo $1 # birinchi argni chiqaradi
+#  arglar $1 $2 ... $9 ${10} ko`rinishida davom etadi $0 arg script nomi hisoblanadi
+echo $0
+
+echo $# # barcha arglar sonini chiqaradi
+
+#  == shift bu argumentlarni ko`chiradi $3 -> $2 -> $1 tarzida
+#  misol tariqasida quyidagicha amaliy ish 
+#  katologlarning hajmini aniqlab berish
+until [ -z "$1" ]; do
+    du -h $1
+    shift # birinchi argumentga kiying arglar qiymatini birma bir tushuraveradi
+done
+# /usr/bin -> birinchi argga
+# /etc -> 2
+# /opt -> 3
