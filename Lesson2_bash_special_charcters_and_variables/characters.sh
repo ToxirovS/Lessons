@@ -31,6 +31,8 @@ ls -l; echo "bu ikkinchi buyruq"; #cat variable.sh
 # bir qatorda shu tarzda yoziladi ; belgisi orqali xuddi yangi qatordan yozilgandek natija qaytaradi
 
 #  ==== ;; in case shart operatorda qo'llanilishi ====
+
+echo -e "\v\t === Characters ==="
 echo
 case "$0" in
     ./characters.sh)
@@ -44,6 +46,15 @@ esac
 
 #  ==== . belgisi va uning vazifalari ====
 
-. ../git.sh
+# "." dan source sifatida foydalanib boshqa fayllar bilan bog`lashimiz mumkin
+. ../suorse.sh
 
+# biz yana "." dan yasgirin fayllar yaratishda ham ishlatamiz misol uchun .gitlab_ci.yaml fayl
+
+# Yana bir vazifasi kataloglarni ko`rsatadi ya'ni . joriy katolog .. bitta oldingi katalog ../../ 2ta oldingi katalog
+ls -l .  
+ls -l .. 
+ls -l ../.. 
 echo $null
+
+
