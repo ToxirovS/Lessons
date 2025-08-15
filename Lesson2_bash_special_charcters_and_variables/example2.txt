@@ -1,0 +1,4 @@
+ id,nomi narxi hajmi
+ 1,olma 100 12
+ 3,nok  200 10 
+ 2,anor 300 50

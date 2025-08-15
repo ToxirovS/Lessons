@@ -112,7 +112,7 @@ funk() {
 #  funksiyadan tashqarida
     echo $block "1"
     funk
- # agar funk funksiyasi echodan oldin chaqirilsa endi block o'zagruvchisi o`qiladi
+ # agar funk Funksiyasi echodan oldin chaqirilsa endi block o'zagruvchisi o`qiladi
     echo $block "2"
 
 
