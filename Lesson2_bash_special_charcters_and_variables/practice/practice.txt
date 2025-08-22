@@ -1,0 +1,5 @@
+ Date = 2025-08-22
+ Ip = 192.168.199.102
+ Operating system = OperatingSystem:Ubuntu
+ Free memory = 1.1Gi
+ Root memory usage = 40%
