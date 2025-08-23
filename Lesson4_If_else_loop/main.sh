@@ -19,11 +19,11 @@
 
 filename=exisistfile.txt
 
-if [[ -f "$filename" ]]; then
-echo "$filename Mavjud"; cat $filename
-else 
-echo "$filename topilmadi"; touch $filename
-fi; echo "File test tugatildi."
+# if [[ -f "$filename" ]]; then
+# echo "$filename Mavjud"; cat $filename
+# else 
+# echo "$filename topilmadi"; touch $filename
+# fi; echo "File test tugatildi."
 
 # else bu if shartiga mos kelmagan barcha hollarda ishlaydi
 # bu kabi tekshiruv shartalarida [[]] ishlatiladi
@@ -32,32 +32,32 @@ fi; echo "File test tugatildi."
 
 # [[ -d FILE ]]	Directory
 
-if [[ -d practice ]]; then
-    ls -l practice
-else
-    echo not found
-fi
+# if [[ -d practice ]]; then
+#     ls -l practice
+# else
+#     echo not found
+# fi
 
 # [[ -h FILE ]]	Symlink -> fayl sybolik linkligini tekshiradi
 
-if [[ -h link ]]; then
-    echo bu fayl symlink
-else
-    echo bu fayl oddiy fayl
-fi
+# if [[ -h link ]]; then
+#     echo bu fayl symlink
+# else
+#     echo bu fayl oddiy fayl
+# fi
 
 #  elif -> if dan so`ng yana bir shart tekshiradi 
 #  if -> agar 
 #  elif -> if shartiga mos kelmasa elif sharti bilan yana bir tekshiruv amalga oshiriladi
 #  else -> bironta shartga tushmaganda else ni komandsi bajariladi
 
-if [[ -d $filename ]]; then
-    echo "$filename katalog"
-elif [[ -f $filename ]]; then
-    echo "$filename fayl"
-else
-    echo "$filename topilmadi"
-fi
+# if [[ -d $filename ]]; then
+#     echo "$filename katalog"
+# elif [[ -f $filename ]]; then
+#     echo "$filename fayl"
+# else
+#     echo "$filename topilmadi"
+# fi
 
 #  arfmetik shartlar
 
@@ -67,14 +67,14 @@ fi
 #  -ne teng emas ((!=))
 # read foydalanuvchidan qiymat qabul qiladi
 
-read a
-read b
+# read a
+# read b
 
-if (( $a < $b )); then
-    echo "$a soni $b dan kichik"
-elif (( $a > $b )); then
-    echo "$a soni $b dan katta"
-fi
+# if (( $a < $b )); then
+#     echo "$a soni $b dan kichik"
+# elif (( $a > $b )); then
+#     echo "$a soni $b dan katta"
+# fi
 
 # ==== logical conditions =====
 
@@ -84,12 +84,12 @@ fi
 
 # read a
 # read b
-if [[ "$a" -gt "$b" && "$b" -ne 0 || "$a" -eq "$b" ]]; then # muhim! bir nechta shartlarni qo`llashda "||" && dan kiyin kelishi kerak
-    let res="$a/$b"
-    echo $res
-elif [ "$b" -eq 0 -o "$b" -lt 0 ]; then
-    echo "Iltimos 0 dan katta yoki unga teng bulmagan son kiriting"
-else 
-echo "Xatolik"
-fi
+# if [[ "$a" -gt "$b" && "$b" -ne 0 || "$a" -eq "$b" ]]; then # muhim! bir nechta shartlarni qo`llashda "||" && dan kiyin kelishi kerak
+#     let res="$a/$b"
+#     echo $res
+# elif [ "$b" -eq 0 -o "$b" -lt 0 ]; then
+#     echo "Iltimos 0 dan katta yoki unga teng bulmagan son kiriting"
+# else 
+# echo "Xatolik"
+# fi
 
