@@ -27,7 +27,10 @@ echo -e "\v Free memory = $Mem"
 echo -e "\v Root memory usage = $Memroot"  
 } > ./practice.txt
 cat ./practice.txt
-else 
+
+elif [[ ! -e $filename ]]; then
     echo "$filename yaratildi yana bir boara urinib ko'ring"; touch $filename
+else 
+    echo "xatolik"
 fi
 

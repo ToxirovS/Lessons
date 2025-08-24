@@ -93,3 +93,9 @@ filename=exisistfile.txt
 # echo "Xatolik"
 # fi
 
+#  ===== loop =====
+
+# while do; for in; until do
+
+# == while ==
+
