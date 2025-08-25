@@ -14,6 +14,6 @@ echo -e "\v\t==== ps ===="
 
 # -e - barcha jarayonlarni ko'rsatish
 # -f - Show detailed information
-# -u - Show processes for a specific user
-# -a - Show all processes with a terminal
+# -u - tanlangan user
+# -a - terminalda bo`layotgan jarayonlarni ham qo`shib ko`rsatadi`
 # -x - Show processes without a terminal

@@ -95,7 +95,93 @@ filename=exisistfile.txt
 
 #  ===== loop =====
 
-# while do; for in; until do
+# # while do; for in; until do
 
-# == while ==
+# # == while ==
 
+# while [ shart ]; do  
+#       command...
+# done 
+# # while shu ko`rinishda bo`ladi
+
+# #  == while auto increment
+# i=1
+# while (( $i <= 10 )) ; do 
+#     echo "bu qator raqami $i"
+#     ((i++))
+# done
+
+# # ==
+# # == xuddi shu kabi until da ham ifodalash umkin 
+# count=1
+# until [ $count -gt 10 ]; do
+#     echo "bu qator raqami $count"
+#     ((count++))
+# done
+# #  ==
+
+# #  == xuddi shu kabi for da ham ifodalash umkin 
+# for (( i=0 ; i <= 10 ; i++ )); do
+#     echo "bu qator raqami $i"
+# done
+# # ==
+
+# # ===  for in
+
+# for item in {1..5}; do
+#     echo bu qator raqami $item
+# done
+# #  1 dan 5 gacha raqamlarda chiqaradi
+# # bu orqali fayl nomi takrorlanmaydigan bir nechta fayllar yaratishimiz mumkin
+
+# for item in {1..5}; do
+#    touch nom$item.txt
+#    echo "bu $item raqamli fayl" > nom$item.txt
+# done
+
+#  infinety loop for calc
+# while true; do
+#     echo "[exit] -> n"
+#     read a
+#     read b
+#     let c=a+b
+#     echo $c
+
+    
+#     if [ $a = "n" ] || [ $b = "n" ]; then
+#         break;
+#     fi
+# done
+
+# for files in *.txt; do
+#     echo $files
+# done
+# # txt kengaytmali fayllarnibarhasi chiqarish
+
+# cat $filename | while read line; do
+#     echo $line
+# done
+
+# # ==== continue and break ====
+# for o in {1..5}; do 
+# if [[ $o == 3 ]]; then
+#     continue;
+# fi
+#     echo $o
+# done
+# # loop 1 dan boshlab 5 gacha raqamlarni chiqarishni boshlaydi shartga ko`ra 3 raqamiga kelganda uni tashlab yana loop davom etadi
+
+
+# # toq va juft sonlarni aniqlash 
+# for item in $(seq 1 10); do
+#     let juft="item%2"
+#     if [[ $juft == 0 ]]; then
+#         continue;
+#     fi
+#     echo $item
+# done
+# c=1
+# cat $filename | while read line; do
+#     echo $c. $line
+#     ((c++))
+# done
