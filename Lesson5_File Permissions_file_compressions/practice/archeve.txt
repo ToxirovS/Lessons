@@ -1,0 +1,20 @@
+  adding: file1 (stored 0%)
+  adding: file2 (stored 0%)
+  adding: folder/ (stored 0%)
+updating: file1 (stored 0%)
+deleting: file1
+  adding: file1 (stored 0%)
+  adding: file2 (stored 0%)
+Archive:  archive.zip
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+        0  2025-08-27 10:00   file2
+---------                     -------
+        0                     1 file
+Archive:  archivep.zip
+    testing: file1                    OK
+    testing: file2                    OK
+No errors detected in compressed data of archivep.zip.
+Archive:  archivep.zip
+ extracting: ../file1                
+ extracting: ../file2                
